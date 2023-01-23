@@ -18,7 +18,7 @@ class Aritmatika {
         return a + a;
     }
 }
-
+//
 
 // Dynamic Polymorphism
 class Hewan {
