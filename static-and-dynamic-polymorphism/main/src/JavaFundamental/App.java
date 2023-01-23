@@ -1,5 +1,8 @@
 package JavaFundamental;
 
+import java.util.ArrayList;
+import java.util.List;
+
 // Static Polymorphism
 class Aritmatika {
     /**
@@ -29,7 +32,7 @@ class Hewan {
 
 class Dog extends Hewan {
     public void suara() {
-        sysout.println("Guk guk guk");
+        System.out.println("Guk guk guk");
     }
 }
 
@@ -56,14 +59,27 @@ public class App extends Hewan {
         Kuda.suara();
 
         // dynamic polymorphism
-        Hewan collectionHewan[] = new Hewan()[4];
+        Hewan collectionHewan[] = new Hewan[2];
         Dog anjing = new Dog();
         App binatangJadiJadian = new App();
         collectionHewan[0] = anjing;
         collectionHewan[1] = binatangJadiJadian;
 
+        int i=0;
         for (Hewan a : collectionHewan) {
+            System.out.println("dari looping " + i++);
             a.suara();
         }
+
+
+        List<Hewan> listObject = new ArrayList<>();
+        listObject.add(anjing);
+        listObject.add(binatangJadiJadian);
+        int j=0;
+        for(Hewan b : listObject) {
+            System.out.println("dengan list array " + j++);
+            b.suara();
+        }
+
     }
 }
